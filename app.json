@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "pipeline",
-    "slug": "pipeline",
+    "name": "Pipeline",
+    "slug": "Pipeline",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -24,10 +24,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.naveen_prasanth_k.Pipeline"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "51a4929c-34de-40e5-a3e6-871149aec399"
+      }
     }
   }
 }
