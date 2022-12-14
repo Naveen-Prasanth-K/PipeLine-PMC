@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Pipeline",
-    "slug": "Pipeline",
+    "name": "PMC Ragu",
+    "slug": "pipeline",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -25,7 +25,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.naveen_prasanth_k.Pipeline"
+      "package": "com.naveen_prasanth_k.pipeline"
     },
     "web": {
       "favicon": "./assets/favicon.png"

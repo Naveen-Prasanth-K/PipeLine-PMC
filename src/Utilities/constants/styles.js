@@ -16,6 +16,7 @@ export const GlobalStyles = {
     blue75: '#017DDD',
     blue100: '#2A76AA',
     blue150: '#40089B',
+    blue175: '#092f87',
     blue200: '#00326D',
     blue300: '#324054',
     blue400: '#1A202C',

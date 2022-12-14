@@ -14,19 +14,19 @@ export default function LoginScreen() {
         navigation.navigate('HomeScreen');
     }
     return (
-        <LinearGradient colors={['#f3d8fe', '#C4DDFE',]} start={{ x: 0, y: 0 }} end={{ x: 0.5, y: 1 }} style={styles.container}>
+        <LinearGradient colors={['#f3d8fe', '#b6cbfc',]} start={{ x: 0, y: 0 }} end={{ x: 0.5, y: 1 }} style={styles.container}>
             <SafeAreaView>
                 <View style={styles.container1}>
                     <Image source={require('../../images/wave.png')} style={styles.image} />
                 </View>
                 <View style={styles.btnGroup}>
-                    <TouchableOpacity style={[styles.btn, selection === 1 ? { backgroundColor: GlobalStyles.colors.activeblue } : null]} onPress={() => setSelection(1)}>
+                    <TouchableOpacity style={[styles.btn, selection === 1 ? { backgroundColor: GlobalStyles.colors.blue175 } : null]} onPress={() => setSelection(1)}>
                         <Text style={[styles.btnText, selection === 1 ? { color: "white" } : null]}>TWAD</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={[styles.btn, selection === 2 ? { backgroundColor: GlobalStyles.colors.activeblue } : null]} onPress={() => setSelection(2)}>
+                    <TouchableOpacity style={[styles.btn, selection === 2 ? { backgroundColor: GlobalStyles.colors.blue175 } : null]} onPress={() => setSelection(2)}>
                         <Text style={[styles.btnText, selection === 2 ? { color: "white" } : null]}>Consultancy</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={[styles.btn, selection === 3 ? { backgroundColor: GlobalStyles.colors.activeblue } : null]} onPress={() => setSelection(3)}>
+                    <TouchableOpacity style={[styles.btn, selection === 3 ? { backgroundColor: GlobalStyles.colors.blue175 } : null]} onPress={() => setSelection(3)}>
                         <Text style={[styles.btnText, selection === 3 ? { color: "white" } : null]}>Contractor</Text>
                     </TouchableOpacity>
                 </View>
@@ -45,11 +45,13 @@ export default function LoginScreen() {
                         keyboardType="numeric"
                         maxLength={10}
                     />
-                    <Text style={styles.forget}>Forget UserID/Password?</Text>
+                    <TouchableOpacity>
+                        <Text style={styles.forget}>Forget UserID/Password?</Text>
+                    </TouchableOpacity>
                     <Button
                         title="Login"
                         buttonStyle={{
-                            backgroundColor: GlobalStyles.colors.activeblue,
+                            backgroundColor: GlobalStyles.colors.blue175,
                             borderRadius: 30,
                             margin: 10,
                             padding: 10
