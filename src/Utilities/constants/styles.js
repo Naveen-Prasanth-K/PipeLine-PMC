@@ -1,4 +1,8 @@
 export const GlobalStyles = {
+  fontfamily: {
+    Amaranth700BoldItalic: 'Amaranth_700Bold_Italic',
+
+  },
   colors: {
     //White
     primary50: '#FFFFFF',

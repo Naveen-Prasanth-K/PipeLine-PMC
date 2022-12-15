@@ -18,12 +18,36 @@ export const DashboardChartData =
 }
 
 export const DashboardList = [
-    { list: 'Consultancy Attendence & View' },
-    { list: "Today's Progress" },
-    { list: 'Work Schedule & Progress' },
-    { list: 'measurement Approvel & Details' },
-    { list: 'Quality Testing' },
-    { list: 'Site Gallery' },
-    { list: 'Group Chat' },
-    { list: 'Quality Testing' },
+    {
+        list: 'Consultancy Attendence & View',
+        image: require('../../images/dashboard/dashboard1.png')
+    },
+    {
+        list: "Today's Progress",
+        image: require('../../images/dashboard/dashboard4.png')
+    },
+    {
+        list: 'Work Schedule & Progress',
+        image: require('../../images/dashboard/dashboard3.png')
+    },
+    {
+        list: 'Measurement Approvel & Details',
+        image: require('../../images/dashboard/dashboard2.png')
+    },
+    {
+        list: 'Quality Testing',
+        image: require('../../images/dashboard/dashboard5.png')
+    },
+    {
+        list: 'Site Gallery',
+        image: require('../../images/dashboard/dashboard6.png')
+    },
+    {
+        list: 'Group Chat',
+        image: require('../../images/dashboard/dashboard7.png')
+    },
+    {
+        list: 'Quality Testing',
+        image: require('../../images/dashboard/dashboard8.png')
+    },
 ]

@@ -1,5 +1,7 @@
+import { LinearGradient } from 'expo-linear-gradient';
+import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Dimensions, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Dimensions, Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { GlobalStyles } from '../../Utilities/constants/styles';
 import { DashboardList } from '../../Utilities/Data/DummyData';
@@ -9,22 +11,28 @@ const screenWidth = Dimensions.get("window").width;
 
 export default function HomeScreen() {
     return (
-        <SafeAreaView>
-            <ScrollView>
-                <View style={{ alignItems: 'center' }}>
-                    <Text style={styles.projectName}>Project Name</Text>
-                    <Text style={styles.projectcat}>CWS 986 Rajapalayam Sathur Vaigai</Text>
-                </View>
-                <DashboardChart />
-                <View style={styles.listFlex}>
-                    {DashboardList.map((item, index) => (
-                        <View key={index} style={styles.listContainer}>
-                            <Text style={{ flexWrap: 'wrap', width: '100%', textAlign: 'center' }}>{item.list}</Text>
+        <>
+            <StatusBar backgroundColor={'#f3d8fe'} />
+            <SafeAreaView>
+                <ScrollView>
+                    <LinearGradient colors={['#f3d8fe', '#b6cbfc',]} start={{ x: 0, y: 0 }} end={{ x: 0.5, y: 1 }} style={styles.container}>
+                        <View style={{ alignItems: 'center' }}>
+                            <Text style={styles.projectName}>Project Name</Text>
+                            <Text style={styles.projectcat}>CWS 986 Rajapalayam Sathur Vaigai</Text>
                         </View>
-                    ))}
-                </View>
-            </ScrollView>
-        </SafeAreaView>
+                        <DashboardChart />
+                        <View style={styles.listFlex}>
+                            {DashboardList.map((item, index) => (
+                                <TouchableOpacity key={index} style={styles.listContainer}>
+                                    <Text style={styles.topic}>{item.list}</Text>
+                                    <Image source={item.image} style={styles.image} />
+                                </TouchableOpacity>
+                            ))}
+                        </View>
+                    </LinearGradient>
+                </ScrollView>
+            </SafeAreaView>
+        </>
     )
 }
 
@@ -47,19 +55,36 @@ const styles = StyleSheet.create({
         flexWrap: 'wrap',
         width: '100%',
         justifyContent: 'space-evenly',
+        marginVertical: 10,
 
     },
     listContainer: {
-        width: 150,
+        width: screenWidth / 2 * 0.85,
         height: 150,
-        borderWidth: 1,
+        padding: 10,
         flexDirection: 'column',
         flexWrap: 'wrap',
-        borderRadius: 75,
         alignItems: 'center',
-        justifyContent: 'center',
-        marginVertical: 15,
-        backgroundColor: GlobalStyles.colors.primary100
+        marginVertical: 8,
+        backgroundColor: GlobalStyles.colors.primary50,
+        elevation: 10,
+        borderRadius: 15,
+    },
+    topic: {
+        flexWrap: 'wrap',
+        width: '100%',
+        textAlign: 'center',
+        fontSize: 17,
+        fontWeight: '600',
+        marginVertical: 10,
+    },
+    image: {
+        width: 70,
+        height: 70,
+        position: 'absolute',
+        right: 0,
+        bottom: 0,
+        margin: 10,
     }
 
 })
