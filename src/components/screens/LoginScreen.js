@@ -14,7 +14,7 @@ export default function LoginScreen() {
         navigation.navigate('HomeScreen');
     }
     return (
-        <LinearGradient colors={['#f3d8fe', '#b6cbfc',]} start={{ x: 0, y: 0 }} end={{ x: 0.5, y: 1 }} style={styles.container}>
+        <LinearGradient colors={['#6FB1FC', '#4364F7', '#0052D4']} start={{ x: 0, y: 0 }} end={{ x: 0.5, y: 1 }} style={styles.container}>
             <SafeAreaView>
                 <View style={styles.container1}>
                     <Image source={require('../../images/wave.png')} style={styles.image} />
